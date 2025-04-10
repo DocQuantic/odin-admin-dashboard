@@ -4,6 +4,22 @@
     box-sizing: border-box;
 }
 
-h1{
-    color: rebeccapurple;
+body{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: minmax(min-content, 1fr) 4fr;
+    grid-template-rows: minmax(min-content, 1fr) 4fr;
+}
+
+.sidebar{
+    background-color: aqua;
+    grid-row: 1 / -1;
+}
+
+.header{
+    background-color: beige;
+}
+
+.main-content{
+    background-color: brown;
 }
