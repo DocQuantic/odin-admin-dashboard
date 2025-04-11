@@ -1,3 +1,11 @@
+@font-face {
+    font-family: 'robotoregular';
+    src: url('fonts/roboto-variablefont_wdthwght-webfont.woff2') format('woff2'),
+         url('fonts/roboto-variablefont_wdthwght-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -5,6 +13,8 @@
 }
 
 body{
+    font-family: 'robotoregular';
+    font-size: 20px;
     height: 100vh;
     display: grid;
     grid-template-columns: minmax(min-content, 1fr) 4fr;
@@ -12,12 +22,47 @@ body{
 }
 
 .sidebar{
-    background-color: aqua;
+    color: white;
+    background-color: rgb(154, 197, 255);
     grid-row: 1 / -1;
+    padding: 1em;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-auto-rows: min-content;
+    gap: 4em;
+}
+
+.title{
+    display: flex;
+    align-content: center;
+    gap: 1em;
+}
+
+.title h1{
+    align-self: center;
+}
+
+.logo-main{
+    width: 4em;
+}
+
+.menu ul{
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-auto-rows: min-content;
+    list-style: none;
+    align-items: center;
+    column-gap: 1rem;
+    font-weight: 600;
+}
+
+.logo-sidebar{
+    width: 2em;
 }
 
 .header{
     background-color: beige;
+    
 }
 
 .main-content{
