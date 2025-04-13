@@ -6,10 +6,20 @@
     font-style: normal;
 }
 
+:root{
+    --theme-color: rgb(154, 197, 255);
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+button,
+input[type="text"]{
+    appearance: none;
+    font: inherit;
 }
 
 body{
@@ -18,12 +28,12 @@ body{
     height: 100vh;
     display: grid;
     grid-template-columns: minmax(min-content, 1fr) 4fr;
-    grid-template-rows: minmax(min-content, 1fr) 4fr;
+    grid-template-rows: min-content 1fr;
 }
 
 .sidebar{
     color: white;
-    background-color: rgb(154, 197, 255);
+    background-color: var(--theme-color);
     grid-row: 1 / -1;
     padding: 1em;
     display: grid;
@@ -63,7 +73,66 @@ body{
 
 .header{
     background-color: beige;
+    display: grid;
+    grid-template-columns: 2fr, 1fr;
+    grid-template-rows: repeat(2, min-content);
+    row-gap: 1em;
+    padding: 1em;
+}
 
+.searchbar{
+    grid-column: 1 / 2;
+    display: flex;
+    gap: 1em;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.searchbar > input{
+    width: 100%;
+    border-radius: 20px;
+    background-color: rgb(221, 221, 221);
+}
+
+.shortcuts{
+    grid-column: 2 / 3;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.search-img,
+.bell-icon{
+    width: 1.5em;
+}
+
+.avatar-mini{
+    width: 2em;
+}
+
+.hi-there{
+    display: grid;
+    grid-template-columns: min-content minmax(150px, 1fr);
+    grid-template-rows: repeat(2, min-content);
+}
+
+.hi-there .avatar{
+    grid-column: 1 / 2;
+    grid-row: 1 / -1;
+    width: 4em;
+}
+
+.buttons{
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons button{
+    border: 0;
+    background-color: var(--theme-color);
+    padding: 10px 30px;
+    border-radius: 20px;
 }
 
 .main-content{
