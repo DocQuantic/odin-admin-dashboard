@@ -72,12 +72,14 @@ body{
 }
 
 .header{
-    background-color: beige;
+    background-color: white;
     display: grid;
-    grid-template-columns: 2fr, 1fr;
+    grid-template-columns: 2fr 1fr;
     grid-template-rows: repeat(2, min-content);
     row-gap: 1em;
     padding: 1em;
+    padding-left: 2em;
+    padding-right: 3em;
 }
 
 .searchbar{
@@ -98,6 +100,8 @@ body{
     grid-column: 2 / 3;
     display: flex;
     justify-content: flex-end;
+    padding-right: 1em;
+    gap: 2em;
 }
 
 .search-img,
@@ -126,6 +130,7 @@ body{
     gap: 2em;
     justify-content: center;
     align-items: center;
+    padding-right: 1em;
 }
 
 .buttons button{
