@@ -95,12 +95,14 @@ body{
     width: 100%;
     border-radius: 20px;
     background-color: rgb(221, 221, 221);
+    padding: 0.5em 0.5em;
 }
 
 .shortcuts{
     grid-column: 2 / 3;
     display: flex;
     justify-content: flex-end;
+    align-items: center;
     padding-right: 1em;
     gap: 2em;
 }
@@ -112,12 +114,20 @@ body{
 
 .avatar-mini{
     width: 2em;
+    height: 2em;
+}
+
+.avatar-mini,
+.avatar,
+.trend > img{
+    border-radius: 50%;
 }
 
 .hi-there{
     display: grid;
     grid-template-columns: min-content minmax(150px, 1fr);
     grid-template-rows: repeat(2, min-content);
+    column-gap: 1em;
 }
 
 .hi-there .avatar{
@@ -145,7 +155,7 @@ body{
     background-color: rgb(201, 201, 201);
     display: grid;
     grid-template-columns: 3fr 1fr;
-    grid-template-rows: repeat(2, min-content);
+    grid-template-rows: min-content 1fr;
     gap: 2em;
     padding: 2em;
     padding-left: 1em;
@@ -177,6 +187,10 @@ body{
     border-radius: 10px;
     border-left: 10px solid orange;
     box-shadow: 5px 5px 10px grey;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1em;
     > p{
         font-size: 0.9em;
         margin-bottom: 1em;
